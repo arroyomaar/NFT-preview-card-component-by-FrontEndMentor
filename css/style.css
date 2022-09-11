@@ -1,0 +1,168 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);/*color texto y hr*/
+    --Cyan: hsl(178, 100%, 50%);/*color ethernum y hover en tituilo jules y imagen ether*/
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);/*color sombra*/
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);/*color fondo*/
+    --Very-dark-blue-line: hsl(215, 32%, 27%);/*color tarjeta*/
+    --White: hsl(0, 0%, 100%);/*color titulo y nombre de jules */
+    --font-size:15px;
+  }
+  *{
+    margin: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-size: var(--font-size);
+  }
+img{
+    max-width: 100%;
+}
+body{
+    background-color:var(--Very-dark-blue-card-BG);
+    color:var(--Soft-blue);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+  }
+  .conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .card{
+    background-color: var(--Very-dark-blue-line);
+    border-radius: 1.33rem;
+    box-shadow: -16px 40px 10px 1px var(--Very-dark-blue-main-BG),16px 40px 10px 1px var(--Very-dark-blue-main-BG),-8px 25px 10px 1px var(--Very-dark-blue-main-BG),8px 25px 10px 1px var(--Very-dark-blue-main-BG);
+    height: 36.333rem;
+    overflow: hidden;
+    width: 21.666rem;
+  }
+  .new-card{
+    height: 33.3333rem;
+    width: 18.66666rem;
+    margin: 1.6rem;
+  }
+  .image{
+    position: relative;
+}
+.equilibrium{
+      border-radius: 1.3333rem;
+      
+  }
+  .view{
+    position: absolute;
+    top:0;
+    height: 280px;
+    width: 280px;
+    background-color: hsl(178, 100%, 50%, 55%);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    border-radius: 1.3333rem;
+  }
+  .view:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+.view img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-content{
+    height: 7.3333rem;
+}
+.text-content h2{
+    color: var(--White);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1.666rem;
+    margin-bottom: .666rem;
+}
+.text-content h2:hover{
+    color: var(--Cyan);
+    cursor:pointer;
+}
+.text-content p{
+    line-height: 1.7rem;
+    height: 2.666rem;
+    text-align: justify;
+    width: 16.666rem;
+    margin-bottom: 1.3333rem;
+}
+.ethereum-days{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 400;
+    padding-bottom:.9rem;
+    width: 18.666rem;
+    border-bottom: .3px solid var(--Soft-blue);
+    position: relative;
+}
+.ethereum span{
+    position: absolute;
+    top:-2px;
+    color:var(--Cyan);
+    margin-left: 8px;
+    text-transform: uppercase;
+    width: 6rem;
+}
+.days span{
+    color:var(--Soft-blue) ;
+    margin-left: 8px;
+    width: 70px;
+}
+.jules{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    width: 15rem;
+    justify-content: flex-start;
+}
+.avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    margin-right: 15px;
+}
+.create-by{
+    align-self: center;
+}
+.create-by span{
+    color: var(--White);
+    font-weight: 600;
+}
+.create-by span:hover{
+    color: var(--Cyan);
+    cursor:pointer;
+}
+@media(min-width:1440px){
+      .card{
+        box-shadow: -24px 50px 15px 2px var(--Very-dark-blue-main-BG),24px 50px 15px 2px var(--Very-dark-blue-main-BG),-15px 35x 15px 2px var(--Very-dark-blue-main-BG),15px 35px 15px 2px var(--Very-dark-blue-main-BG);
+        height:40rem;
+        width: 23.33333rem;
+      }
+      .new-card{
+          height: 36.3333rem;
+          width: 20rem;
+      }
+      .equilibrium :hover{
+        height: 20rem;
+      }
+    .image img{
+        height: 20rem;
+    }
+    .text-content{
+        height: 8.3333rem;
+    }
+    .text-content h2{
+        color: var(--White);
+        font-size: 1.6rem;
+    }
+    .ethereum-days{
+        border-bottom: none;
+    }
+}
